@@ -25,3 +25,5 @@ F:\freelance projects\retail system\retail_system\retail_system\obj\Debug\retail
 F:\freelance projects\retail system\retail_system\retail_system\obj\Debug\retail_system.Main.resources
 F:\freelance projects\retail system\retail_system\retail_system\obj\Debug\retail_system.PrintInvoice.resources
 F:\freelance projects\retail system\retail_system\retail_system\obj\Debug\retail_system.SalesManagement.resources
+F:\freelance projects\retail system\retail_system\retail_system\obj\Debug\retail_system.CustomerRegsitration.resources
+F:\freelance projects\retail system\retail_system\retail_system\obj\Debug\retail_system.SalesForEmployees.resources

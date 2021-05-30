@@ -24,5 +24,29 @@ namespace retail_system
             invoice_obj.ShowDialog();
             this.Close();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            CustomerRegsitration custom_obj = new CustomerRegsitration();
+            this.Hide();
+            custom_obj.ShowDialog();
+            this.Close();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Main main_obj = new Main();
+            this.Hide();
+            main_obj.ShowDialog();
+            this.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            SalesForEmployees sales_obj = new SalesForEmployees();
+            this.Hide();
+            sales_obj.ShowDialog();
+            this.Close();
+        }
     }
 }
