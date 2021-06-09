@@ -50,7 +50,8 @@ namespace retail_system
                     databaseConnection.Open();
                     MySqlDataReader myReader = commandDatabase.ExecuteReader();
                     databaseConnection.Close();
-                    
+                    QRgenerate qr_obj = new QRgenerate();
+                    qr_obj.ShowDialog();
                 }
                 catch (Exception ex)
                 {
@@ -61,6 +62,7 @@ namespace retail_system
             }
 
             connection.Close();
+            
         }
 
         private void discardButton_Click(object sender, EventArgs e)

@@ -106,6 +106,7 @@
             this.Controls.Add(this.label1);
             this.Name = "SalesManagement";
             this.Text = "Sales Management";
+            this.Load += new System.EventHandler(this.SalesManagement_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

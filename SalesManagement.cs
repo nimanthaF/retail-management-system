@@ -48,5 +48,10 @@ namespace retail_system
             sales_obj.ShowDialog();
             this.Close();
         }
+
+        private void SalesManagement_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

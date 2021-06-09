@@ -17,7 +17,7 @@ namespace retail_system
         {
             InitializeComponent();
             FillcomboCashier();
-            
+           
         }
 
         void FillcomboCashier()
@@ -27,7 +27,7 @@ namespace retail_system
             MySqlCommand command;
 
 
-            MySqlDataReader mdr;
+            MySqlDataReader mdr_cash;
 
 
 
@@ -38,38 +38,104 @@ namespace retail_system
             command = new MySqlCommand(query, connection);
 
 
-            mdr = command.ExecuteReader();
+            mdr_cash = command.ExecuteReader();
 
 
 
-            while (mdr.Read())
+            while (mdr_cash.Read())
             {
-                string sName = mdr.GetString("username");
+                string sName = mdr_cash.GetString("username");
                 comboBox1.Items.Add(sName);
             }
 
-
+            command.Cancel();
+            mdr_cash.Close();
             connection.Close();
         }
 
-        void FillTotal()
+        
+
+        private void GetPurchaseRecords()
         {
             string MyConString = "datasource=localhost;port=3306;username=root;password=;database=retail_system";
-            MySqlConnection connection = new MySqlConnection(MyConString);
-            MySqlCommand command;
-
-            connection.Open();
-            string query = "SELECT SUM(CAST(Total AS UNSIGNED)) FROM purchase_item";
-
-
-            command = new MySqlCommand(query, connection);
+            MySqlConnection refresh_connection = new MySqlConnection(MyConString);
+            string refreshQuery = "SELECT * FROM purchase_item WHERE Cashier='"+comboBox1.Text+"'";
+            MySqlCommand commandDatabase = new MySqlCommand(refreshQuery, refresh_connection);
+            DataTable dtable = new DataTable();
+            refresh_connection.Open();
 
 
-            Object result = command.ExecuteScalar();
+            MySqlDataReader mdr = commandDatabase.ExecuteReader();
 
-            textBox5.Text = Convert.ToString(result);
 
-            connection.Close();
+            dtable.Load(mdr);
+
+            commandDatabase.Cancel();
+            mdr.Close();
+            refresh_connection.Close();
+            dataGridView1.DataSource = dtable;
+
+           
+        }
+
+        private void GetTotal()
+        {
+            string MyConString = "datasource=localhost;port=3306;username=root;password=;database=retail_system";
+            MySqlConnection connection1 = new MySqlConnection(MyConString);
+            string total = "SELECT SUM(Total) FROM purchase_item WHERE Cashier='" + comboBox1.Text + "'";
+            MySqlCommand commandDatabase1 = new MySqlCommand(total, connection1);
+
+            connection1.Open();
+
+
+            MySqlDataReader mdr1 = commandDatabase1.ExecuteReader();
+            Object result1 = commandDatabase1.ExecuteScalar();
+            textBox5.Text = Convert.ToString(result1);
+
+            commandDatabase1.Cancel();
+            mdr1.Close();
+            connection1.Close();
+            
+        }
+
+        private void GetAmount()
+        {
+            string MyConString = "datasource=localhost;port=3306;username=root;password=;database=retail_system";
+            MySqlConnection connection2 = new MySqlConnection(MyConString);
+            string tot_amount = "SELECT SUM(Amount_Received) FROM purchase_item WHERE Cashier='" + comboBox1.Text + "'";
+            MySqlCommand commandDatabase2 = new MySqlCommand(tot_amount, connection2);
+
+            connection2.Open();
+
+
+            MySqlDataReader mdr2 = commandDatabase2.ExecuteReader();
+            Object result2 = commandDatabase2.ExecuteScalar();
+            textBox4.Text = Convert.ToString(result2);
+
+            commandDatabase2.Cancel();
+            mdr2.Close();
+            connection2.Close();
+
+        }
+
+        private void GetBalance()
+        {
+            string MyConString = "datasource=localhost;port=3306;username=root;password=;database=car_rent";
+            MySqlConnection connection3 = new MySqlConnection(MyConString);
+            string tot_balance = "SELECT SUM(Blance) FROM purchase_item WHERE Cashier='" + comboBox1.Text + "'";
+            MySqlCommand commandDatabase3 = new MySqlCommand(tot_balance, connection3);
+
+            connection3.Open();
+
+
+            MySqlDataReader mdr3 = commandDatabase3.ExecuteReader();
+            Object result3 = commandDatabase3.ExecuteScalar();
+            textBox6.Text = Convert.ToString(result3);
+
+            commandDatabase3.Cancel();
+            mdr3.Close();
+            connection3.Close();
+
         }
 
 
@@ -84,77 +150,31 @@ namespace retail_system
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            string MyConString = "datasource=localhost;port=3306;username=root;password=;database=retail_system";
-            MySqlConnection connection = new MySqlConnection(MyConString);
-            MySqlCommand command;
-            MySqlDataReader mdr;
-
-            connection.Open();
-
-            string selectQuery = "SELECT * FROM purchase_item  WHERE ItemCode = '" + txtItemCode.Text + "';";
-            command = new MySqlCommand(selectQuery, connection);
-            mdr = command.ExecuteReader();
-
-            if (mdr.Read())
-            {
-                MessageBox.Show("This item has already added!");
-            }
-            else
-            {
-                int quantity = int.Parse(txtNoPieces.Text);
-                int price = int.Parse(txtPrice.Text);
-
-                int tot = quantity * price;
-                int tot_payment;
-
-                if (comboBoxDiscount.SelectedIndex == 1)
-                {
-                    tot_payment = tot - ((tot * 5) / 100);
-                }else if(comboBoxDiscount.SelectedIndex == 2)
-                {
-                    tot_payment = tot - ((tot * 10) / 100);
-                }
-                else
-                {
-                    tot_payment = tot;
-                }
-
-                string query = "INSERT INTO  purchase_item(ItemCode,Item_Name,No_of_Pieces,Price,Discount,Total,CustomerID) VALUES('" + txtItemCode.Text + "','" + txtItemName.Text + "','" + txtNoPieces.Text + "','" + txtPrice.Text + "','" + comboBoxDiscount.Text + "','"+tot_payment+"','" + txtCustomerID.Text + "')";
-                MySqlConnection databaseConnection = new MySqlConnection(MyConString);
-                MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
-                try
-                {
-                    databaseConnection.Open();
-                    MySqlDataReader myReader = commandDatabase.ExecuteReader();
-                    databaseConnection.Close();
-                    FillTotal();
-
-                }
-                catch (Exception ex)
-                {
-                    // Show any error message.
-                    MessageBox.Show(ex.Message);
-                }
-                MessageBox.Show("Customer Successfully Registered!");
-            }
-
-            connection.Close();
-        }
+        
 
         private void button2_Click(object sender, EventArgs e)
         {
+           
             string MyConString = "datasource=localhost;port=3306;username=root;password=;database=retail_system";
-            MySqlConnection connection = new MySqlConnection(MyConString);
-            MySqlCommand command;
-            MySqlDataReader mdr;
+            MySqlConnection connection1 = new MySqlConnection(MyConString);
+            string total = "SELECT SUM(Total),SUM(Amount_Received),SUM(Balance) FROM purchase_item WHERE Cashier='" + comboBox1.Text + "'";
+            MySqlCommand commandDatabase1 = new MySqlCommand(total, connection1);
 
-            connection.Open();
+            connection1.Open();
 
-            string selectQuery = "SELECT SUM(total) FROM purchase_item  WHERE ItemCode = '" + txtItemCode.Text + "';";
-            command = new MySqlCommand(selectQuery, connection);
-            mdr = command.ExecuteReader();
+
+            MySqlDataReader mdr1 = commandDatabase1.ExecuteReader();
+
+            while (mdr1.Read())
+            {
+                textBox5.Text = mdr1.GetValue(0).ToString();
+                textBox4.Text = mdr1.GetValue(1).ToString();
+                textBox6.Text = mdr1.GetValue(2).ToString();
+            }
+          
+
+            connection1.Close();
+            GetPurchaseRecords();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -165,6 +185,19 @@ namespace retail_system
         private void SalesForEmployees_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            SalesManagement obj = new SalesManagement();
+            this.Hide();
+            obj.ShowDialog();
+            this.Close();
         }
     }
 }

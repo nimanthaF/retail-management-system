@@ -237,7 +237,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(859, 664);
+            this.ClientSize = new System.Drawing.Size(837, 664);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.dateBirthday);
             this.Controls.Add(this.discardButton);
