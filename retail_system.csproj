@@ -65,6 +65,9 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WebcamCapturer.Core, Version=1.1.1.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebcamCapturer.Core.1.1.1.2\lib\net472\WebcamCapturer.Core.dll</HintPath>
+    </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="zxing, Version=0.16.6.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
       <HintPath>..\packages\ZXing.Net.0.16.6\lib\net47\zxing.dll</HintPath>
@@ -180,6 +183,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SysAdmin.resx">
       <DependentUpon>SysAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserRegistration.resx">
+      <DependentUpon>UserRegistration.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

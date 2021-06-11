@@ -45,3 +45,6 @@ F:\freelance projects\retail system\retail_system\retail_system\obj\Debug\retail
 F:\freelance projects\retail system\retail_system\retail_system\obj\Debug\retail_system.FormPrint.resources
 F:\freelance projects\retail system\retail_system\retail_system\bin\Debug\QRCoder.dll
 F:\freelance projects\retail system\retail_system\retail_system\obj\Debug\retail_system.QRgenerate.resources
+F:\freelance projects\retail system\retail_system\retail_system\bin\Debug\WebcamCapturer.Core.dll
+F:\freelance projects\retail system\retail_system\retail_system\obj\Debug\retail_system.SysAdmin.resources
+F:\freelance projects\retail system\retail_system\retail_system\obj\Debug\retail_system.UserRegistration.resources

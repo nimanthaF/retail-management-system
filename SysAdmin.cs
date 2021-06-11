@@ -16,5 +16,13 @@ namespace retail_system
         {
             InitializeComponent();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            UserRegistration obj = new UserRegistration();
+            this.Hide();
+            obj.ShowDialog();
+            this.Close();
+        }
     }
 }

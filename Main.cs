@@ -29,5 +29,18 @@ namespace retail_system
             sales_obj.ShowDialog();
             this.Close();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            SysAdmin obj = new SysAdmin();
+            this.Hide();
+            obj.ShowDialog();
+            this.Close();
+        }
     }
 }

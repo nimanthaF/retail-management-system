@@ -89,5 +89,10 @@ namespace retail_system
             sales_obj.ShowDialog();
             this.Close();
         }
+
+        private void CustomerRegsitration_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

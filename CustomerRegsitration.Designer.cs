@@ -259,6 +259,7 @@
             this.Controls.Add(this.label1);
             this.Name = "CustomerRegsitration";
             this.Text = "CustomerRegsitration";
+            this.Load += new System.EventHandler(this.CustomerRegsitration_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
