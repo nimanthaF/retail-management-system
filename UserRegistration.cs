@@ -93,7 +93,7 @@ namespace retail_system
                     MemoryStream stream = new MemoryStream();
                     pictureBox2.Image.Save(stream, System.Drawing.Imaging.ImageFormat.Jpeg);
                     byte[] pic = stream.ToArray();
-                    commandDatabase.Parameters.AddWithValue("Pic", pic);
+                    commandDatabase.Parameters.AddWithValue("@Pic", pic);
                     // MySqlDataReader myReader = commandDatabase.ExecuteReader();
                     commandDatabase.ExecuteNonQuery();
                     databaseConnection.Close();
@@ -109,6 +109,20 @@ namespace retail_system
             }
 
             connection.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            QRgenerate obj = new QRgenerate();
+            obj.ShowDialog();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            SysAdmin obj = new SysAdmin();
+            this.Hide();
+            obj.ShowDialog();
+            this.Close();
         }
     }
 }

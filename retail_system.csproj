@@ -145,6 +145,12 @@
     <Compile Include="UserRegistration.Designer.cs">
       <DependentUpon>UserRegistration.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserUpdate.Designer.cs">
+      <DependentUpon>UserUpdate.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CustomerRegsitration.resx">
       <DependentUpon>CustomerRegsitration.cs</DependentUpon>
     </EmbeddedResource>
@@ -186,6 +192,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserRegistration.resx">
       <DependentUpon>UserRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserUpdate.resx">
+      <DependentUpon>UserUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
