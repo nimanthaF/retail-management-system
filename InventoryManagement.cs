@@ -24,5 +24,13 @@ namespace retail_system
             obj.ShowDialog();
             this.Close();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SupplierData obj = new SupplierData();
+            this.Hide();
+            obj.ShowDialog();
+            this.Close();
+        }
     }
 }

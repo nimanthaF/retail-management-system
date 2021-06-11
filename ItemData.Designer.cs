@@ -46,7 +46,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(353, 96);
+            this.label1.Location = new System.Drawing.Point(245, 92);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(440, 61);
@@ -60,13 +60,13 @@
             this.dataGridView1.Location = new System.Drawing.Point(20, 229);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(529, 366);
+            this.dataGridView1.Size = new System.Drawing.Size(381, 306);
             this.dataGridView1.TabIndex = 10;
             // 
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(647, 506);
+            this.button5.Location = new System.Drawing.Point(529, 463);
             this.button5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(194, 38);
@@ -77,7 +77,7 @@
             // 
             // txtItemName
             // 
-            this.txtItemName.Location = new System.Drawing.Point(743, 254);
+            this.txtItemName.Location = new System.Drawing.Point(605, 233);
             this.txtItemName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtItemName.Name = "txtItemName";
             this.txtItemName.Size = new System.Drawing.Size(187, 26);
@@ -87,7 +87,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(610, 254);
+            this.label6.Location = new System.Drawing.Point(472, 233);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(87, 20);
@@ -98,7 +98,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(610, 327);
+            this.label2.Location = new System.Drawing.Point(472, 306);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 20);
@@ -107,7 +107,7 @@
             // 
             // txtPrice
             // 
-            this.txtPrice.Location = new System.Drawing.Point(743, 327);
+            this.txtPrice.Location = new System.Drawing.Point(605, 306);
             this.txtPrice.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(187, 26);
@@ -116,7 +116,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(766, 589);
+            this.button1.Location = new System.Drawing.Point(682, 531);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(175, 45);
@@ -127,7 +127,7 @@
             // 
             // txtPieces
             // 
-            this.txtPieces.Location = new System.Drawing.Point(743, 410);
+            this.txtPieces.Location = new System.Drawing.Point(605, 389);
             this.txtPieces.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPieces.Name = "txtPieces";
             this.txtPieces.Size = new System.Drawing.Size(187, 26);
@@ -137,7 +137,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(610, 410);
+            this.label3.Location = new System.Drawing.Point(472, 389);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 20);
@@ -162,7 +162,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1010, 667);
+            this.ClientSize = new System.Drawing.Size(890, 609);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);

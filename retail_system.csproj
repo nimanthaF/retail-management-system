@@ -163,6 +163,12 @@
     <Compile Include="SalesManagement.Designer.cs">
       <DependentUpon>SalesManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="SupplierData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SupplierData.Designer.cs">
+      <DependentUpon>SupplierData.cs</DependentUpon>
+    </Compile>
     <Compile Include="SysAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -231,6 +237,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SalesManagement.resx">
       <DependentUpon>SalesManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SupplierData.resx">
+      <DependentUpon>SupplierData.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SysAdmin.resx">
       <DependentUpon>SysAdmin.cs</DependentUpon>
