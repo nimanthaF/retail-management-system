@@ -10,37 +10,32 @@ using System.Windows.Forms;
 
 namespace retail_system
 {
-    public partial class Main : Form
+    public partial class EmployeeManagement : Form
     {
-        public Main()
+        public EmployeeManagement()
         {
             InitializeComponent();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            SalesManagement sales_obj = new SalesManagement();
-            this.Hide();
-            sales_obj.ShowDialog();
-            this.Close();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            EmployeeManagement obj = new EmployeeManagement();
+            EmployeeUpdate obj = new EmployeeUpdate();
             this.Hide();
             obj.ShowDialog();
             this.Close();
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
-            SysAdmin obj = new SysAdmin();
+            Leaves obj = new Leaves();
+            this.Hide();
+            obj.ShowDialog();
+            this.Close();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Main obj = new Main();
             this.Hide();
             obj.ShowDialog();
             this.Close();

@@ -147,9 +147,9 @@
             this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(267, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(309, 41);
+            this.label1.Size = new System.Drawing.Size(246, 41);
             this.label1.TabIndex = 86;
-            this.label1.Text = "Employee Registration";
+            this.label1.Text = "Employee Update";
             // 
             // button2
             // 
@@ -350,9 +350,9 @@
             this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button4.Location = new System.Drawing.Point(12, 12);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(127, 27);
+            this.button4.Size = new System.Drawing.Size(99, 27);
             this.button4.TabIndex = 117;
-            this.button4.Text = "Admin Menu";
+            this.button4.Text = "return";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 

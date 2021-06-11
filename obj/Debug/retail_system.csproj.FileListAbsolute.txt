@@ -49,3 +49,6 @@ F:\freelance projects\retail system\retail_system\retail_system\bin\Debug\Webcam
 F:\freelance projects\retail system\retail_system\retail_system\obj\Debug\retail_system.SysAdmin.resources
 F:\freelance projects\retail system\retail_system\retail_system\obj\Debug\retail_system.UserRegistration.resources
 F:\freelance projects\retail system\retail_system\retail_system\obj\Debug\retail_system.UserUpdate.resources
+F:\freelance projects\retail system\retail_system\retail_system\obj\Debug\retail_system.EmployeeManagement.resources
+F:\freelance projects\retail system\retail_system\retail_system\obj\Debug\retail_system.Leaves.resources
+F:\freelance projects\retail system\retail_system\retail_system\obj\Debug\retail_system.EmployeeUpdate.resources

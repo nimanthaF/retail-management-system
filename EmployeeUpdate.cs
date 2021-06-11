@@ -16,45 +16,53 @@ using System.Data.SqlClient;
 
 namespace retail_system
 {
-
-    
-    public partial class UserUpdate : Form
+    public partial class EmployeeUpdate : Form
     {
-        public UserUpdate()
+        public EmployeeUpdate()
         {
             InitializeComponent();
         }
 
-       
-
         FilterInfoCollection filterInfoCollection;
         VideoCaptureDevice captureDevice;
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            BarcodeReader barcodeReader = new BarcodeReader();
+            Result result = barcodeReader.Decode((Bitmap)pictureBox1.Image);
+            if (result != null)
+            {
+                txtName.Text = result.ToString();
+                timer1.Stop();
+                if (captureDevice.IsRunning)
+                    captureDevice.Stop();
+            }
+        }
 
         private void button2_Click(object sender, EventArgs e)
         {
             string MyConString = "datasource=localhost;port=3306;username=root;password=;database=retail_system";
-            
-               
-                try
-                {
-                    MySqlConnection databaseConnection = new MySqlConnection(MyConString);
-                    databaseConnection.Open();
 
-                   
-                    MySqlCommand commandDatabase = new MySqlCommand("UPDATE employee  SET Name='" + txtName.Text + "',Designation='" + comboBox1.Text + "',Age='" + textAge.Text + "',Mobile='" + txtMobile.Text + "',Identity_Card='" + txtID.Text + "',EMail='" + txtMail.Text + "',Birthday='" + dateBirthday.Text + "',Address='" + richTextAddress.Text + "',Emergency='" + textEmergency.Text + "',Notes='" + richTextNotes.Text + "' WHERE Employee_ID='" + txtEmpID.Text+"' ;" , databaseConnection);
-                  
-                    
-                    commandDatabase.ExecuteNonQuery();
-                    databaseConnection.Close();
 
-                    MessageBox.Show("Employee Successfully Updated!");
-                }
-                catch (Exception ex)
-                {
-                    // Show any error message.
-                    MessageBox.Show(ex.Message);
-                }
-           
+            try
+            {
+                MySqlConnection databaseConnection = new MySqlConnection(MyConString);
+                databaseConnection.Open();
+
+
+                MySqlCommand commandDatabase = new MySqlCommand("UPDATE employee  SET Name='" + txtName.Text + "',Designation='" + comboBox1.Text + "',Age='" + textAge.Text + "',Mobile='" + txtMobile.Text + "',Identity_Card='" + txtID.Text + "',EMail='" + txtMail.Text + "',Birthday='" + dateBirthday.Text + "',Address='" + richTextAddress.Text + "',Emergency='" + textEmergency.Text + "',Notes='" + richTextNotes.Text + "' WHERE Employee_ID='" + txtEmpID.Text + "' ;", databaseConnection);
+
+
+                commandDatabase.ExecuteNonQuery();
+                databaseConnection.Close();
+
+                MessageBox.Show("Employee Successfully Updated!");
+            }
+            catch (Exception ex)
+            {
+                // Show any error message.
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -70,7 +78,7 @@ namespace retail_system
             pictureBox1.Image = (Bitmap)eventArgs.Frame.Clone();
         }
 
-        private void UserUpdate_Load(object sender, EventArgs e)
+        private void EmployeeUpdate_Load(object sender, EventArgs e)
         {
             filterInfoCollection = new FilterInfoCollection(FilterCategory.VideoInputDevice);
             foreach (FilterInfo filterInfo in filterInfoCollection)
@@ -78,20 +86,7 @@ namespace retail_system
             cboDevice.SelectedIndex = 0;
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            BarcodeReader barcodeReader = new BarcodeReader();
-            Result result = barcodeReader.Decode((Bitmap)pictureBox1.Image);
-            if (result != null)
-            {
-                txtName.Text = result.ToString();
-                timer1.Stop();
-                if (captureDevice.IsRunning)
-                    captureDevice.Stop();
-            }
-        }
-
-        private void UserUpdate_FormClosed(object sender, FormClosedEventArgs e)
+        private void EmployeeUpdate_FormClosed(object sender, FormClosedEventArgs e)
         {
             if (captureDevice.IsRunning)
                 captureDevice.Stop();
@@ -106,7 +101,7 @@ namespace retail_system
 
             MySqlDataReader mdr;
             connection.Open();
-            string query = "Select Employee_ID,Designation,Age,Mobile,Identity_Card,EMail,Birthday,Address,Emergency,Notes,Image from employee WHERE Name='" + txtName.Text+"'";
+            string query = "Select Employee_ID,Designation,Age,Mobile,Identity_Card,EMail,Birthday,Address,Emergency,Notes,Image from employee WHERE Name='" + txtName.Text + "'";
 
 
             command = new MySqlCommand(query, connection);
@@ -125,7 +120,7 @@ namespace retail_system
                 richTextAddress.Text = mdr.GetValue(7).ToString();
                 textEmergency.Text = mdr.GetValue(8).ToString();
                 richTextNotes.Text = mdr.GetValue(9).ToString();
-                pictureBox2.Image= ByteArrayToImage((byte[])(mdr.GetValue(10)));
+                pictureBox2.Image = ByteArrayToImage((byte[])(mdr.GetValue(10)));
             }
         }
 
@@ -136,11 +131,6 @@ namespace retail_system
                 Image returnImage = Image.FromStream(ms);
                 return returnImage;
             }
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -157,6 +147,14 @@ namespace retail_system
             textEmergency.Text = "";
             richTextNotes.Text = "";
             pictureBox2.Image = null;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            EmployeeManagement obj = new EmployeeManagement();
+            this.Hide();
+            obj.ShowDialog();
+            this.Close();
         }
     }
 }
