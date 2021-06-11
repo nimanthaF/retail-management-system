@@ -19,7 +19,10 @@ namespace retail_system
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            InventoryManagement obj = new InventoryManagement();
+            this.Hide();
+            obj.ShowDialog();
+            this.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
