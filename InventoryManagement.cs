@@ -32,5 +32,13 @@ namespace retail_system
             obj.ShowDialog();
             this.Close();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            PurchasingOrder obj = new PurchasingOrder();
+            this.Hide();
+            obj.ShowDialog();
+            this.Close();
+        }
     }
 }

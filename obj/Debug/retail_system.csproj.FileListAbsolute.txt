@@ -55,3 +55,4 @@ F:\freelance projects\retail system\retail_system\retail_system\obj\Debug\retail
 F:\freelance projects\retail system\retail_system\retail_system\obj\Debug\retail_system.InventoryManagement.resources
 F:\freelance projects\retail system\retail_system\retail_system\obj\Debug\retail_system.ItemData.resources
 F:\freelance projects\retail system\retail_system\retail_system\obj\Debug\retail_system.SupplierData.resources
+F:\freelance projects\retail system\retail_system\retail_system\obj\Debug\retail_system.PurchasingOrder.resources
