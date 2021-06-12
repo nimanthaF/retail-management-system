@@ -101,6 +101,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GRN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GRN.Designer.cs">
+      <DependentUpon>GRN.cs</DependentUpon>
+    </Compile>
     <Compile Include="InventoryManagement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,6 +210,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GRN.resx">
+      <DependentUpon>GRN.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InventoryManagement.resx">
       <DependentUpon>InventoryManagement.cs</DependentUpon>

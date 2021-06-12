@@ -253,5 +253,11 @@ namespace retail_system
             txtTot.Text = tot.ToString();
             total_pay = total_pay + tot;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            GRN obj = new GRN();
+            obj.ShowDialog();
+        }
     }
 }
