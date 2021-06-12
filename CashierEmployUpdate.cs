@@ -16,15 +16,23 @@ using System.Data.SqlClient;
 
 namespace retail_system
 {
-    public partial class EmployeeUpdate : Form
+    public partial class CashierEmployUpdate : Form
     {
-        public EmployeeUpdate()
+        public CashierEmployUpdate()
         {
             InitializeComponent();
         }
 
         FilterInfoCollection filterInfoCollection;
         VideoCaptureDevice captureDevice;
+
+        private void CashierEmployUpdate_Load(object sender, EventArgs e)
+        {
+            filterInfoCollection = new FilterInfoCollection(FilterCategory.VideoInputDevice);
+            foreach (FilterInfo filterInfo in filterInfoCollection)
+                cboDevice.Items.Add(filterInfo.Name);
+            cboDevice.SelectedIndex = 0;
+        }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -38,6 +46,20 @@ namespace retail_system
                     captureDevice.Stop();
             }
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            captureDevice = new VideoCaptureDevice(filterInfoCollection[cboDevice.SelectedIndex].MonikerString);
+            captureDevice.NewFrame += CaptureDevice_NewFrame; ;
+            captureDevice.Start();
+            timer1.Start();
+        }
+        private void CaptureDevice_NewFrame(object sender, NewFrameEventArgs eventArgs)
+        {
+            pictureBox1.Image = (Bitmap)eventArgs.Frame.Clone();
+        }
+
+
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -65,28 +87,7 @@ namespace retail_system
             }
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-            captureDevice = new VideoCaptureDevice(filterInfoCollection[cboDevice.SelectedIndex].MonikerString);
-            captureDevice.NewFrame += CaptureDevice_NewFrame; ;
-            captureDevice.Start();
-            timer1.Start();
-        }
-
-        private void CaptureDevice_NewFrame(object sender, NewFrameEventArgs eventArgs)
-        {
-            pictureBox1.Image = (Bitmap)eventArgs.Frame.Clone();
-        }
-
-        private void EmployeeUpdate_Load(object sender, EventArgs e)
-        {
-            filterInfoCollection = new FilterInfoCollection(FilterCategory.VideoInputDevice);
-            foreach (FilterInfo filterInfo in filterInfoCollection)
-                cboDevice.Items.Add(filterInfo.Name);
-            cboDevice.SelectedIndex = 0;
-        }
-
-        private void EmployeeUpdate_FormClosed(object sender, FormClosedEventArgs e)
+        private void CashierEmployUpdate_FormClosed(object sender, FormClosedEventArgs e)
         {
             if (captureDevice.IsRunning)
                 captureDevice.Stop();
@@ -124,7 +125,6 @@ namespace retail_system
             }
             connection.Close();
         }
-
         private Image ByteArrayToImage(byte[] byteArrayIn)
         {
             using (MemoryStream ms = new MemoryStream(byteArrayIn))
@@ -152,7 +152,7 @@ namespace retail_system
 
         private void button4_Click(object sender, EventArgs e)
         {
-            EmployeeManagement obj = new EmployeeManagement();
+            CashierEmployManagement obj = new CashierEmployManagement();
             this.Hide();
             obj.ShowDialog();
             this.Close();

@@ -25,5 +25,27 @@ namespace retail_system
             QRCode code = new QRCode(data);
             pictureBox1.Image = code.GetGraphic(5);
         }
+
+        
+
+        Bitmap bmp;
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Graphics g = this.CreateGraphics();
+            bmp = new Bitmap(430, this.Size.Height, g);
+            Graphics mg = Graphics.FromImage(bmp);
+            mg.CopyFromScreen(this.Location.X, this.Location.Y, 0, 0, this.Size);
+            printPreviewDialog1.ShowDialog();
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            e.Graphics.DrawImage(bmp, 0, 0);
+        }
+
+        private void printPreviewDialog1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

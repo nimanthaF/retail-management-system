@@ -25,23 +25,48 @@ namespace retail_system
             MySqlCommand command;
             MySqlDataReader mdr;
 
+           
+
             connection.Open();
-            string query = "Select * from users Where username='" + txtUsername.Text + "'and password='" + txtPassword.Text + "'";
+            string query = "Select username,password,designation from users Where username='" + txtUsername.Text + "'and password='" + txtPassword.Text + "' ";
             command = new MySqlCommand(query, connection);
             mdr = command.ExecuteReader();
 
+            string designation;
+
+            while (mdr.Read())
+            {
+                designation = mdr.GetValue(2).ToString();
+                if (designation == "cashier")
+                {
+                    CashierMain obj = new CashierMain();
+                    this.Hide();
+                    obj.ShowDialog();
+                    this.Close();
+                }
+                else
+                {
+                    Main main_obj = new Main();
+                    this.Hide();
+                    main_obj.ShowDialog();
+                    this.Close();
+                }
+            }
+            /*
             if (mdr.Read())
             {
-               // MessageBox.Show("Login Successful!");
-                Main main_obj = new Main();
+               // MeMain main_obj = new Main();
                 this.Hide();
                 main_obj.ShowDialog();
-                this.Close();
+                this.Close();ssageBox.Show("Login Successful!");
+                
             }
             else
             {
                 MessageBox.Show("Incorrect Login Information! Try again.");
             }
+
+    */
             connection.Close();
         }
     }

@@ -77,6 +77,54 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CashierCustomerRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CashierCustomerRegistration.Designer.cs">
+      <DependentUpon>CashierCustomerRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CashierEmployManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CashierEmployManagement.Designer.cs">
+      <DependentUpon>CashierEmployManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CashierEmployUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CashierEmployUpdate.Designer.cs">
+      <DependentUpon>CashierEmployUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CashierLeaves.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CashierLeaves.Designer.cs">
+      <DependentUpon>CashierLeaves.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CashierMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CashierMain.Designer.cs">
+      <DependentUpon>CashierMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CashierPrintInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CashierPrintInvoice.Designer.cs">
+      <DependentUpon>CashierPrintInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CashierSalesForEmployees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CashierSalesForEmployees.Designer.cs">
+      <DependentUpon>CashierSalesForEmployees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CashierSalesManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CashierSalesManagement.Designer.cs">
+      <DependentUpon>CashierSalesManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomerRegsitration.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +184,12 @@
     </Compile>
     <Compile Include="FormPrint.Designer.cs">
       <DependentUpon>FormPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PerfromanceEvaluation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PerfromanceEvaluation.Designer.cs">
+      <DependentUpon>PerfromanceEvaluation.cs</DependentUpon>
     </Compile>
     <Compile Include="PrintInvoice.cs">
       <SubType>Form</SubType>
@@ -199,6 +253,30 @@
     <Compile Include="UserUpdate.Designer.cs">
       <DependentUpon>UserUpdate.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CashierCustomerRegistration.resx">
+      <DependentUpon>CashierCustomerRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashierEmployManagement.resx">
+      <DependentUpon>CashierEmployManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashierEmployUpdate.resx">
+      <DependentUpon>CashierEmployUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashierLeaves.resx">
+      <DependentUpon>CashierLeaves.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashierMain.resx">
+      <DependentUpon>CashierMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashierPrintInvoice.resx">
+      <DependentUpon>CashierPrintInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashierSalesForEmployees.resx">
+      <DependentUpon>CashierSalesForEmployees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashierSalesManagement.resx">
+      <DependentUpon>CashierSalesManagement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomerRegsitration.resx">
       <DependentUpon>CustomerRegsitration.cs</DependentUpon>
     </EmbeddedResource>
@@ -228,6 +306,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormPrint.resx">
       <DependentUpon>FormPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PerfromanceEvaluation.resx">
+      <DependentUpon>PerfromanceEvaluation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PrintInvoice.resx">
       <DependentUpon>PrintInvoice.cs</DependentUpon>

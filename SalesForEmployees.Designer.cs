@@ -55,6 +55,7 @@
             this.label2.Size = new System.Drawing.Size(109, 20);
             this.label2.TabIndex = 6;
             this.label2.Text = "Cashier Name";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // comboBox1
             // 
@@ -77,6 +78,7 @@
             this.label1.Size = new System.Drawing.Size(134, 20);
             this.label1.TabIndex = 8;
             this.label1.Text = "Purchase Items";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // dataGridView1
             // 
@@ -95,6 +97,7 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(182, 22);
             this.textBox4.TabIndex = 28;
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // textBox5
             // 
@@ -103,6 +106,7 @@
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(182, 22);
             this.textBox5.TabIndex = 27;
+            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // textBox6
             // 
@@ -111,6 +115,7 @@
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(182, 22);
             this.textBox6.TabIndex = 26;
+            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // label6
             // 
@@ -123,6 +128,7 @@
             this.label6.Size = new System.Drawing.Size(70, 20);
             this.label6.TabIndex = 24;
             this.label6.Text = "Blalance";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label8
             // 
@@ -135,6 +141,7 @@
             this.label8.Size = new System.Drawing.Size(135, 20);
             this.label8.TabIndex = 23;
             this.label8.Text = "Amount Received";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label9
             // 
@@ -172,6 +179,7 @@
             this.label11.Size = new System.Drawing.Size(175, 20);
             this.label11.TabIndex = 30;
             this.label11.Text = "Payment Information";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // button4
             // 

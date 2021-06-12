@@ -11,16 +11,19 @@ using MySql.Data.MySqlClient;
 
 namespace retail_system
 {
-    public partial class CustomerRegsitration : Form
+    public partial class CashierCustomerRegistration : Form
     {
-        public CustomerRegsitration()
+        public CashierCustomerRegistration()
         {
             InitializeComponent();
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
-
+            CashierSalesManagement sales_obj = new CashierSalesManagement();
+            this.Hide();
+            sales_obj.ShowDialog();
+            this.Close();
         }
 
         private void registerButton_Click(object sender, EventArgs e)
@@ -62,7 +65,6 @@ namespace retail_system
             }
 
             connection.Close();
-            
         }
 
         private void discardButton_Click(object sender, EventArgs e)
@@ -80,94 +82,6 @@ namespace retail_system
 
             MessageBox.Show("Customer Successfully Discarded!");
             connection.Close();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            SalesManagement sales_obj = new SalesManagement();
-            this.Hide();
-            sales_obj.ShowDialog();
-            this.Close();
-        }
-
-        private void CustomerRegsitration_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtCustomID_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtMobile_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtID_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtMail_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtAddress_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dateBirthday_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

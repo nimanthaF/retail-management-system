@@ -65,6 +65,22 @@ namespace retail_system
             connection1.Close();
         }
 
+        private void DeleteTempTable()
+        {
+            string MyConString = "datasource=localhost;port=3306;username=root;password=;database=retail_system";
+            MySqlConnection connection1 = new MySqlConnection(MyConString);
+            string total = "DELETE FROM temp_purchase_items";
+            MySqlCommand commandDatabase1 = new MySqlCommand(total, connection1);
+
+            connection1.Open();
+
+
+            MySqlDataReader mdr1 = commandDatabase1.ExecuteReader();
+
+
+            connection1.Close();
+        }
+
         Bitmap bmp;
 
         private void button1_Click(object sender, EventArgs e)
@@ -74,6 +90,13 @@ namespace retail_system
             Graphics mg = Graphics.FromImage(bmp);
             mg.CopyFromScreen(this.Location.X, this.Location.Y, 0, 0, this.Size);
             printPreviewDialog1.ShowDialog();
+
+            DeleteTempTable();
+
+            SalesManagement obj = new SalesManagement();
+            this.Hide();
+            obj.ShowDialog();
+            this.Close();
         }
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)

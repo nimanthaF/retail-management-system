@@ -59,6 +59,7 @@
             this.label1.Size = new System.Drawing.Size(307, 41);
             this.label1.TabIndex = 3;
             this.label1.Text = "Customer Registration";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // pictureBox1
             // 
@@ -68,6 +69,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(674, 452);
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label2
             // 
@@ -79,6 +81,7 @@
             this.label2.Size = new System.Drawing.Size(99, 20);
             this.label2.TabIndex = 5;
             this.label2.Text = "Customer ID";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -90,6 +93,7 @@
             this.label3.Size = new System.Drawing.Size(52, 20);
             this.label3.TabIndex = 6;
             this.label3.Text = "E mail";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -101,6 +105,7 @@
             this.label4.Size = new System.Drawing.Size(26, 20);
             this.label4.TabIndex = 7;
             this.label4.Text = "ID";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
@@ -112,6 +117,7 @@
             this.label5.Size = new System.Drawing.Size(79, 20);
             this.label5.TabIndex = 8;
             this.label5.Text = "Mobile No";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
@@ -123,6 +129,7 @@
             this.label6.Size = new System.Drawing.Size(51, 20);
             this.label6.TabIndex = 9;
             this.label6.Text = "Name";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label7
             // 
@@ -134,6 +141,7 @@
             this.label7.Size = new System.Drawing.Size(67, 20);
             this.label7.TabIndex = 10;
             this.label7.Text = "Birthday";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label8
             // 
@@ -145,6 +153,7 @@
             this.label8.Size = new System.Drawing.Size(68, 20);
             this.label8.TabIndex = 11;
             this.label8.Text = "Address";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // txtCustomID
             // 
@@ -152,6 +161,7 @@
             this.txtCustomID.Name = "txtCustomID";
             this.txtCustomID.Size = new System.Drawing.Size(272, 20);
             this.txtCustomID.TabIndex = 12;
+            this.txtCustomID.TextChanged += new System.EventHandler(this.txtCustomID_TextChanged);
             // 
             // txtName
             // 
@@ -167,6 +177,7 @@
             this.txtMobile.Name = "txtMobile";
             this.txtMobile.Size = new System.Drawing.Size(272, 20);
             this.txtMobile.TabIndex = 14;
+            this.txtMobile.TextChanged += new System.EventHandler(this.txtMobile_TextChanged);
             // 
             // txtID
             // 
@@ -174,6 +185,7 @@
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(272, 20);
             this.txtID.TabIndex = 15;
+            this.txtID.TextChanged += new System.EventHandler(this.txtID_TextChanged);
             // 
             // txtMail
             // 
@@ -181,6 +193,7 @@
             this.txtMail.Name = "txtMail";
             this.txtMail.Size = new System.Drawing.Size(272, 20);
             this.txtMail.TabIndex = 16;
+            this.txtMail.TextChanged += new System.EventHandler(this.txtMail_TextChanged);
             // 
             // txtAddress
             // 
@@ -188,6 +201,7 @@
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(272, 20);
             this.txtAddress.TabIndex = 18;
+            this.txtAddress.TextChanged += new System.EventHandler(this.txtAddress_TextChanged);
             // 
             // registerButton
             // 
@@ -219,6 +233,7 @@
             this.dateBirthday.Name = "dateBirthday";
             this.dateBirthday.Size = new System.Drawing.Size(272, 20);
             this.dateBirthday.TabIndex = 21;
+            this.dateBirthday.ValueChanged += new System.EventHandler(this.dateBirthday_ValueChanged);
             // 
             // button4
             // 
@@ -237,6 +252,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(837, 664);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.dateBirthday);

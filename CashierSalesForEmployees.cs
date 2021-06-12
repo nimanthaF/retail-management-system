@@ -1,5 +1,4 @@
-﻿using MySql.Data.MySqlClient;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,16 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace retail_system
 {
-    public partial class SalesForEmployees : Form
+    public partial class CashierSalesForEmployees : Form
     {
-        public SalesForEmployees()
+        public CashierSalesForEmployees()
         {
             InitializeComponent();
             FillcomboCashier();
-           
         }
 
         void FillcomboCashier()
@@ -53,13 +52,13 @@ namespace retail_system
             connection.Close();
         }
 
-        
+
 
         private void GetPurchaseRecords()
         {
             string MyConString = "datasource=localhost;port=3306;username=root;password=;database=retail_system";
             MySqlConnection refresh_connection = new MySqlConnection(MyConString);
-            string refreshQuery = "SELECT * FROM purchase_item WHERE Cashier='"+comboBox1.Text+"'";
+            string refreshQuery = "SELECT * FROM purchase_item WHERE Cashier='" + comboBox1.Text + "'";
             MySqlCommand commandDatabase = new MySqlCommand(refreshQuery, refresh_connection);
             DataTable dtable = new DataTable();
             refresh_connection.Open();
@@ -75,7 +74,7 @@ namespace retail_system
             refresh_connection.Close();
             dataGridView1.DataSource = dtable;
 
-           
+
         }
 
         private void GetTotal()
@@ -95,7 +94,7 @@ namespace retail_system
             commandDatabase1.Cancel();
             mdr1.Close();
             connection1.Close();
-            
+
         }
 
         private void GetAmount()
@@ -138,23 +137,8 @@ namespace retail_system
 
         }
 
-
-
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        
-
         private void button2_Click(object sender, EventArgs e)
         {
-           
             string MyConString = "datasource=localhost;port=3306;username=root;password=;database=retail_system";
             MySqlConnection connection1 = new MySqlConnection(MyConString);
             string total = "SELECT SUM(Total),SUM(Amount_Received),SUM(Balance) FROM purchase_item WHERE Cashier='" + comboBox1.Text + "'";
@@ -171,73 +155,18 @@ namespace retail_system
                 textBox4.Text = mdr1.GetValue(1).ToString();
                 textBox6.Text = mdr1.GetValue(2).ToString();
             }
-          
+
 
             connection1.Close();
             GetPurchaseRecords();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void SalesForEmployees_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void button4_Click(object sender, EventArgs e)
         {
-            SalesManagement obj = new SalesManagement();
+            CashierSalesManagement obj = new CashierSalesManagement();
             this.Hide();
             obj.ShowDialog();
             this.Close();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox6_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

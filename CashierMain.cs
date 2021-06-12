@@ -10,24 +10,16 @@ using System.Windows.Forms;
 
 namespace retail_system
 {
-    public partial class SysAdmin : Form
+    public partial class CashierMain : Form
     {
-        public SysAdmin()
+        public CashierMain()
         {
             InitializeComponent();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            UserRegistration obj = new UserRegistration();
-            this.Hide();
-            obj.ShowDialog();
-            this.Close();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            UserUpdate obj = new UserUpdate();
+            CashierSalesManagement obj = new CashierSalesManagement();
             this.Hide();
             obj.ShowDialog();
             this.Close();
@@ -35,7 +27,7 @@ namespace retail_system
 
         private void button3_Click(object sender, EventArgs e)
         {
-            PerfromanceEvaluation obj = new PerfromanceEvaluation();
+            CashierEmployManagement obj = new CashierEmployManagement();
             this.Hide();
             obj.ShowDialog();
             this.Close();

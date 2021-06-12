@@ -57,3 +57,12 @@ F:\freelance projects\retail system\retail_system\retail_system\obj\Debug\retail
 F:\freelance projects\retail system\retail_system\retail_system\obj\Debug\retail_system.SupplierData.resources
 F:\freelance projects\retail system\retail_system\retail_system\obj\Debug\retail_system.PurchasingOrder.resources
 F:\freelance projects\retail system\retail_system\retail_system\obj\Debug\retail_system.GRN.resources
+F:\freelance projects\retail system\retail_system\retail_system\obj\Debug\retail_system.PerfromanceEvaluation.resources
+F:\freelance projects\retail system\retail_system\retail_system\obj\Debug\retail_system.CashierMain.resources
+F:\freelance projects\retail system\retail_system\retail_system\obj\Debug\retail_system.CashierSalesManagement.resources
+F:\freelance projects\retail system\retail_system\retail_system\obj\Debug\retail_system.CashierEmployManagement.resources
+F:\freelance projects\retail system\retail_system\retail_system\obj\Debug\retail_system.CashierEmployUpdate.resources
+F:\freelance projects\retail system\retail_system\retail_system\obj\Debug\retail_system.CashierLeaves.resources
+F:\freelance projects\retail system\retail_system\retail_system\obj\Debug\retail_system.CashierPrintInvoice.resources
+F:\freelance projects\retail system\retail_system\retail_system\obj\Debug\retail_system.CashierCustomerRegistration.resources
+F:\freelance projects\retail system\retail_system\retail_system\obj\Debug\retail_system.CashierSalesForEmployees.resources
