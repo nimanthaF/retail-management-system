@@ -40,5 +40,13 @@ namespace retail_system
             obj.ShowDialog();
             this.Close();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Main obj = new Main();
+            this.Hide();
+            obj.ShowDialog();
+            this.Close();
+        }
     }
 }

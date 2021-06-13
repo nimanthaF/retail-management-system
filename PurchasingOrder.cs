@@ -259,5 +259,13 @@ namespace retail_system
             GRN obj = new GRN();
             obj.ShowDialog();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            InventoryManagement obj = new InventoryManagement();
+            this.Hide();
+            obj.ShowDialog();
+            this.Close();
+        }
     }
 }

@@ -64,6 +64,7 @@
             this.dateDate = new System.Windows.Forms.DateTimePicker();
             this.richtxtRemarks = new System.Windows.Forms.RichTextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -398,12 +399,26 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button4.Location = new System.Drawing.Point(23, 22);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(104, 27);
+            this.button4.TabIndex = 133;
+            this.button4.Text = " Menu";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // PurchasingOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1163, 1057);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.richtxtRemarks);
             this.Controls.Add(this.dateDate);
             this.Controls.Add(this.button1);
@@ -488,5 +503,6 @@
         private System.Windows.Forms.DateTimePicker dateDate;
         private System.Windows.Forms.RichTextBox richtxtRemarks;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button button4;
     }
 }

@@ -140,7 +140,10 @@ namespace retail_system
 
         private void button4_Click(object sender, EventArgs e)
         {
-            
+            SysAdmin obj = new SysAdmin();
+            this.Hide();
+            obj.ShowDialog();
+            this.Close();
         }
 
         private void button3_Click(object sender, EventArgs e)
